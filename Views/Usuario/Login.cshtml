@@ -1,23 +1,36 @@
 ﻿<div id="login-form">
-    <h2>
-        Acesso do usuário</h2>
-    @Html.Partial("~/Views/Shared/ErrosPartial.cshtml")
-    <div id="mensagem">
+    <div style="float:left; margin-right: 30px;">
+        <h2>
+            Acesso do usuário</h2>
+        @Html.Partial("~/Views/Shared/ErrosPartial.cshtml")
+        <div id="mensagem">
+        </div>
+        <div class="editor-label">
+            @Html.Label("Login ( usuario / email )")
+        </div>
+        <div class="editor-field">
+            @Html.TextBox("login", null, new { @id = "txtLogin" })
+        </div>
+        <div class="editor-label">
+            @Html.Label("Senha")
+        </div>
+        <div class="editor-field">
+            @Html.Password("senha", null, new { @id = "txtSenha" })
+        </div>
+        <br />
+        <input id="btnLogin" class="button orange" type="submit" value="Entrar" style="width: 80px;" />
     </div>
-    <div class="editor-label">
-        @Html.Label("Login ( usuario / email )")
+    <div style="margin-right: 30px">
+        <h1>
+            Não possue uma conta? Cadastre-se!
+        </h1>
+        <p>
+            @Html.ActionLink("Cadastre-se", "Create", "Usuario")
+            em nosso site e tenha um repositório de seus arquivos xml de suas NFes, sem burocracia
+            e sem cadastros excessivos. Não perca tempo nem dinheiro e garanta a segurança dos
+            seus dados de suas notas fiscais eletrônicas.
+        </p>
     </div>
-    <div class="editor-field">
-        @Html.TextBox("login", null, new { @id = "txtLogin" })
-    </div>
-    <div class="editor-label">
-        @Html.Label("Senha")
-    </div>
-    <div class="editor-field">
-        @Html.Password("senha", null, new { @id = "txtSenha" })
-    </div>
-    <br />
-    <input id="btnLogin" class="button orange" type="submit" value="Entrar" style="width: 80px;" />
 </div>
 <script type="text/javascript">
     $(document).ready(function () {

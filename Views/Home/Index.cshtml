@@ -1,57 +1,116 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<div id="top-home-banner">
-    <h1>
-        <b style="color: #f78d1d;">
-        @global_asax.NomeSistema</b>
-        <br />
-        Fácil, rápido e gratuito</h1>
-    <h2 style="color: Gray">
-        Cadastre-se, baixe nosso aplicativo e tenha as melhores 
-        <br />análises gerenciais a partir de suas NFe's.
-        <br />
-    </h2>
-    @Html.ActionLink("Tenha uma conta FREE!", "Create", "Usuario", null, new { @class = "button orange" })
-    @Html.ActionLink("Conheça nossos planos!", "Create", "Usuario", null, new { @class = "button orange" })
+<script src="../../Scripts/easySlider1.7.js" type="text/javascript"></script>
+<div id="slider">
+    <ul>
+        <li>
+            <div class="top-home-banner">
+                <h1>
+                    <b style="color: #f78d1d;">
+                        @global_asax.NomeSistema
+                    <br />
+                    +Repositório NFe</b>
+                    <br />
+                    Fácil, rápido e gratuito</h1>
+                <h2 style="color: Gray">
+                    Cadastre-se, crie seu repositório e
+                    <br />
+                    gerencie com segurança a guarda de suas NFes.
+                    <br />
+                </h2>
+                @Html.ActionLink("Crie sua conta FREE!", "Create", "Usuario", null, new { @class = "button orange" })
+                @Html.ActionLink("Saiba mais sobre +Repositório NFe!", "Create", "Usuario", null, new { @class = "button orange" })
+            </div>
+        </li>
+        <li>
+            <div class="top-home-banner">
+                <h1>
+                    <b style="color: #669900;">
+                        @global_asax.NomeSistema
+                    <br />
+                    +SPED Fiscal</b>
+                    <br />
+                    Geração EFD</h1>
+                <h2 style="color: Gray">
+                    Geração de SPED Fiscal a partir dos
+                    <br />
+                    arquivos XML de suas NFes de Entradas e Saídas.
+                    <br />
+                </h2>
+                @Html.ActionLink("Saiba mais sobre o projeto +SPED Fiscal!", "Create", "Usuario", null, new { @class = "button green" })
+            </div>
+        </li>
+        <li>
+            <div class="top-home-banner">
+                <h1>
+                    <b style="color: #0066FF;">
+                        @global_asax.NomeSistema
+                    <br />
+                    +SPED PIS COFINS</b>
+                    <br />
+                    EFD-PIS/Cofins</h1>
+                <h2 style="color: Gray">
+                    Geração de SPED PIS COFINIS a partir dos
+                    <br />
+                    arquivos XML de suas NFes de Entradas e Saídas.
+                    <br />
+                </h2>
+                @Html.ActionLink("Saiba mais sobre o projeto +SPED Pis Cofins!", "Create", "Usuario", null, new { @class = "button blue" })
+            </div>
+        </li>
+    </ul>
 </div>
 <div class="multicolumn">
     <div class="border-right-dotted">
         <h1>
-        <img src="../../Content/img/1328404236_base.png" align="middle" style="float: left; padding: 15px 15px 0px 0px" />
-        Cadastre
+            <img src="../../Content/img/1328404225_computer.png" align="middle" style="float: left;
+                padding: 15px 15px 0px 0px" />
+            Cadastre
         </h1>
         <p>
             @Html.ActionLink("Cadastre-se", "Create", "Usuario")
-            em nosso site e tenha as melhores análises gerenciais
-            a partir de seus arquivos de escrituração fiscal. Sem burocracia, 
-            sem cadastros excessivos. Além disso, garanta
-            a segurança dos seus arquivos de notas fiscais eletrônicas.
+            em nosso site e tenha um repositório de seus arquivos xml de suas NFes, sem burocracia
+            e sem cadastros excessivos. Não perca tempo nem dinheiro e garanta a segurança dos
+            seus dados de suas notas fiscais eletrônicas.
         </p>
     </div>
     <div class="border-right-dotted">
         <h1>
-        <img src="../../Content/img/1328404211_arrow_up.png" align="middle" style="float: left; padding: 15px 15px 0px 0px" />
-        Sincronize
+            <img src="../../Content/img/1328404211_arrow_up.png" align="middle" style="float: left;
+                padding: 15px 15px 0px 0px" />
+            Sincronize
         </h1>
         <p>
             @Html.ActionLink("Integre", "Create", "Usuario")
-            seu ERP através de nossas bibliotecas ou implemente um canal de comunicação
-            seguindo os padrões estabelecidos pela nossa API.
-            Leia nossa @Html.ActionLink("Documentação", "Create", "Usuario")
-            de integração e transimita com segurança seus arquivos de escrituração fiscail.
+            seu ERP através de nossas bibliotecas ou implemente um canal de comunicação seguindo
+            os padrões estabelecidos pela nossa API. Leia nossa @Html.ActionLink("Documentação", "Create", "Usuario")
+            de integração e transimita com segurança seus xmls de NFe.
         </p>
     </div>
     <div>
         <h1>
-        <img src="../../Content/img/1328404189_pie-chart_graph.png" align="middle" style="float: left; padding: 15px 15px 0px 0px" />
-         Analise
+            <img src="../../Content/img/1328404189_pie-chart_graph.png" align="middle" style="float: left;
+                padding: 15px 15px 0px 0px" />
+            Analise
         </h1>
         <p>
-            Com sua conta no @global_asax.NomeSistema
-            você pode acessar o @Html.ActionLink("painel de documentos fiscais", "Create", "Usuario")
-            e realizar análises gerenciais a partir da disponibilização de suas NFe's. 
-            Sem se preocupar com cadastros excessivos.
+            Ao sincronizar seus arquivos xml das NFes no @global_asax.NomeSistema
+            você alimentará uma base de dados da qual poderá extrair 
+            uma série de análises gerenciais que lhe auxiliarão na sua gestão 
+            de compras e vendas de mercadoria.
         </p>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#slider").easySlider({
+            auto: true,
+            continuous: true,
+            controlsShow: false,
+            pause: 5000,
+            numeric: true
+        });
+
+    });	
+</script>

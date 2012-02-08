@@ -10,11 +10,13 @@ div#login-form
     z-index: 10;
     float: right;
     display: block;
-    padding: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
     margin-top: -5px;
+    margin-left: 30px;
     color: #FFFFFF;
     width: auto;
-    margin-right: -50px;
+    width:930px;
 }
 
 div#menu-bar
